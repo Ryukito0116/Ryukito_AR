@@ -78,6 +78,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         //renderer(testlab, updateAtTime: 1)
         enemy(-0, 1.0, -3, 0, 0, 0, 1, "enemy1")
         attacker(enemyDate.enemyPositionX, enemyDate.enemyPositionY, enemyDate.enemyPositionZ)
+        attacking()
     }
     var timerVerification = true
     let holding = true
@@ -95,16 +96,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
             let playerDate = sceneView.scene.rootNode.childNode(withName: "player", recursively: false)
             playerDate!.position = position
         }
-    }
-    
-    if timerVerification {
-        self.timer = Timer.scheduledTimer( //TimerクラスのメソッドなのでTimerで宣言
-            timeInterval: 0.3, //処理を行う間隔の秒
-          target: self,  //指定した処理を記述するクラスのインスタンス
-            selector: #selector(self.attacking), //実行されるメソッド名
-          userInfo: nil, //selectorで指定したメソッドに渡す情報
-          repeats: true //処理を繰り返すか否か
-        )
     }
     
     func player() {
@@ -180,6 +171,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
             )
         )
         sceneView.scene.rootNode.addChildNode(enemyNode!)
+        
+        self.timer = Timer.scheduledTimer( //TimerクラスのメソッドなのでTimerで宣言
+          timeInterval: 0.5, //処理を行う間隔の秒
+          target: self,  //指定した処理を記述するクラスのインスタンス
+            selector: #selector(self.attacking), //実行されるメソッド名
+          userInfo: nil, //selectorで指定したメソッドに渡す情報
+          repeats: true //処理を繰り返すか否か
+        )
+
+        
         return (enemyPositionX, enemyPositionY, enemyPositionZ)
     }
 
@@ -256,7 +257,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         attackerBulletBody.collisionBitMask = 1
         attackerBulletBody.categoryBitMask = 1
         //発射時の弾の位置
-        attackerbulletNode.position = attackingPosition!
+        attackerbulletNode.position = attackingPosition ?? SCNVector3(0,0,0)
         //着弾後の弾の位置
         guard let camera = sceneView.pointOfView else {
             return
@@ -393,6 +394,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
                 nodeA.removeFromParentNode()
                 sceneView.scene.rootNode.childNode(withName: "attacker", recursively: false)?.removeFromParentNode()
                 self.timerVerification = false
+                self.timer?.invalidate()
             
             var isFirst = true
             if isFirst {
@@ -493,3 +495,4 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         }
     
 }
+
