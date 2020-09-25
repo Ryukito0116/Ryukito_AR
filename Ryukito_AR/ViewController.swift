@@ -434,7 +434,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
             nodeB.removeFromParentNode()
             playerHP -= 10
             if playerHP <= 0 {
-                testlab.text = "Game Over!!!"
+                testlab.text = "Game Over!!!!!!"
             }
         }
         
