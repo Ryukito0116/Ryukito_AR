@@ -343,6 +343,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
     }
     
     
+    
     // ボタンを押すと弾を発射 --ハンドガン
     @IBAction func shot(_ sender: Any) {
         ShotType(0.005, UIColor.black, -7.0, 1.8)
