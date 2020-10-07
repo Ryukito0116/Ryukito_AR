@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		25519F3E24D88C80002502F8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25519F3D24D88C80002502F8 /* MenuViewController.swift */; };
 		25519F4024D9A8BD002502F8 /* vsCPU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25519F3F24D9A8BD002502F8 /* vsCPU.storyboard */; };
-		25519F4224F1595F002502F8 /* EnemyDestruction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25519F4124F1595F002502F8 /* EnemyDestruction.mp3 */; };
 		25519F4624F15CA1002502F8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25519F4524F15CA1002502F8 /* ResultViewController.swift */; };
 		25519F4A24F15DF5002502F8 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25519F4924F15DF5002502F8 /* Result.storyboard */; };
-		25BEA60D24D2814800673098 /* kinkyu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25BEA60C24D2814800673098 /* kinkyu.mp3 */; };
+		259946A9252AA9DF00ECBF52 /* EnemyDestruction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 259946A8252AA9DF00ECBF52 /* EnemyDestruction.mp3 */; };
+		259946AE252AA9E900ECBF52 /* kinkyu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 259946AD252AA9E900ECBF52 /* kinkyu.mp3 */; };
 		D5EE322E24A5C5C8000A73B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE322D24A5C5C8000A73B3 /* AppDelegate.swift */; };
 		D5EE323024A5C5C8000A73B3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D5EE322F24A5C5C8000A73B3 /* art.scnassets */; };
 		D5EE323224A5C5C8000A73B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE323124A5C5C8000A73B3 /* ViewController.swift */; };
@@ -43,10 +43,10 @@
 /* Begin PBXFileReference section */
 		25519F3D24D88C80002502F8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		25519F3F24D9A8BD002502F8 /* vsCPU.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = vsCPU.storyboard; sourceTree = "<group>"; };
-		25519F4124F1595F002502F8 /* EnemyDestruction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = EnemyDestruction.mp3; path = ../../EnemyDestruction.mp3; sourceTree = "<group>"; };
 		25519F4524F15CA1002502F8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		25519F4924F15DF5002502F8 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
-		25BEA60C24D2814800673098 /* kinkyu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kinkyu.mp3; path = ../../kinkyu.mp3; sourceTree = "<group>"; };
+		259946A8252AA9DF00ECBF52 /* EnemyDestruction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = EnemyDestruction.mp3; path = ../../../sound/EnemyDestruction.mp3; sourceTree = "<group>"; };
+		259946AD252AA9E900ECBF52 /* kinkyu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kinkyu.mp3; path = ../../../sound/kinkyu.mp3; sourceTree = "<group>"; };
 		D5EE322A24A5C5C8000A73B3 /* Ryukito_AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ryukito_AR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EE322D24A5C5C8000A73B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5EE322F24A5C5C8000A73B3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -88,6 +88,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2533C1BF252C3320008FBFA7 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D5EE323824A5C5CB000A73B3 /* LaunchScreen.storyboard */,
+				D5EE323324A5C5C8000A73B3 /* Main.storyboard */,
+				25519F3F24D9A8BD002502F8 /* vsCPU.storyboard */,
+				25519F4924F15DF5002502F8 /* Result.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		2533C1C0252C3358008FBFA7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5EE322D24A5C5C8000A73B3 /* AppDelegate.swift */,
+				25519F3D24D88C80002502F8 /* MenuViewController.swift */,
+				D5EE323124A5C5C8000A73B3 /* ViewController.swift */,
+				25519F4524F15CA1002502F8 /* ResultViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		259946A7252AA9A800ECBF52 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				259946A8252AA9DF00ECBF52 /* EnemyDestruction.mp3 */,
+				259946AD252AA9E900ECBF52 /* kinkyu.mp3 */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
 		D5EE322124A5C5C8000A73B3 = {
 			isa = PBXGroup;
 			children = (
@@ -111,17 +142,10 @@
 		D5EE322C24A5C5C8000A73B3 /* Ryukito_AR */ = {
 			isa = PBXGroup;
 			children = (
+				2533C1C0252C3358008FBFA7 /* ViewControllers */,
+				2533C1BF252C3320008FBFA7 /* storyboards */,
+				259946A7252AA9A800ECBF52 /* sound */,
 				D5EE322F24A5C5C8000A73B3 /* art.scnassets */,
-				D5EE323824A5C5CB000A73B3 /* LaunchScreen.storyboard */,
-				D5EE322D24A5C5C8000A73B3 /* AppDelegate.swift */,
-				D5EE323324A5C5C8000A73B3 /* Main.storyboard */,
-				25519F3D24D88C80002502F8 /* MenuViewController.swift */,
-				25519F3F24D9A8BD002502F8 /* vsCPU.storyboard */,
-				D5EE323124A5C5C8000A73B3 /* ViewController.swift */,
-				25519F4924F15DF5002502F8 /* Result.storyboard */,
-				25519F4524F15CA1002502F8 /* ResultViewController.swift */,
-				25BEA60C24D2814800673098 /* kinkyu.mp3 */,
-				25519F4124F1595F002502F8 /* EnemyDestruction.mp3 */,
 				D5EE323624A5C5CB000A73B3 /* Assets.xcassets */,
 				D5EE323B24A5C5CB000A73B3 /* Info.plist */,
 			);
@@ -250,10 +274,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25519F4224F1595F002502F8 /* EnemyDestruction.mp3 in Resources */,
-				25BEA60D24D2814800673098 /* kinkyu.mp3 in Resources */,
 				D5EE323024A5C5C8000A73B3 /* art.scnassets in Resources */,
+				259946A9252AA9DF00ECBF52 /* EnemyDestruction.mp3 in Resources */,
 				D5EE323A24A5C5CB000A73B3 /* LaunchScreen.storyboard in Resources */,
+				259946AE252AA9E900ECBF52 /* kinkyu.mp3 in Resources */,
 				25519F4A24F15DF5002502F8 /* Result.storyboard in Resources */,
 				D5EE323724A5C5CB000A73B3 /* Assets.xcassets in Resources */,
 				D5EE323524A5C5C8000A73B3 /* Main.storyboard in Resources */,

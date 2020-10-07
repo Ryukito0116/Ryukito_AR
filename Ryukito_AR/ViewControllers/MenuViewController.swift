@@ -9,9 +9,14 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    @IBOutlet weak var TitleImage: UIImageView!
+    func titleImage() {
+        TitleImage.image = UIImage(named: "タイトル.png")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleImage()
 
         // Do any additional setup after loading the view.
     }
